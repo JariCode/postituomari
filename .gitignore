@@ -1,0 +1,25 @@
+node_modules/
+.env
+*.log
+.DS_Store
+dist/
+
+# Henkilökohtaiset säännöt – ei koskaan GitHubiin
+extension/rules.local.js
+
+# Poistettu Express-backend (paikallinen kansio voi vielä olla levyllä)
+backend/
+
+# Omat tiedostot, paketit ja viennit
+private/
+*.xpi
+extension/dist/
+*.local.json
+postituomari-export*.json
+
+# Claude Coden paikalliset tiedostot
+.claude/
+.claude/settings.local.json
+CLAUDE.local.md
+
+*:Zone.Identifier

@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "PostiTuomari",
+  "version": "1.1.2",
+  "description": "Lajittelee postin lähettäjän ja otsikon perusteella",
+  "icons": {
+    "32": "icons/postituomari.svg",
+    "64": "icons/postituomari.svg"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "postituomari@jaricode.fi",
+      "strict_min_version": "128.0"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "options_ui": {
+    "page": "options/index.html",
+    "open_in_tab": true
+  },
+  "action": {
+    "default_title": "PostiTuomari",
+    "default_label": "PostiTuomari",
+    "default_icon": "icons/postituomari.svg",
+    "default_popup": "popup/index.html"
+  },
+  "permissions": [
+    "accountsRead",
+    "accountsFolders",
+    "messagesRead",
+    "messagesMove",
+    "storage"
+  ],
+  "optional_permissions": ["addressBooks"],
+  "host_permissions": ["https://api.openai.com/*"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; connect-src https://api.openai.com; base-uri 'none'; form-action 'none'"
+  }
+}
